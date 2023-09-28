@@ -1,0 +1,5 @@
+hubspotClient: {
+  "config": {
+    "accessToken": "pat-na1-90fa1536-0115-490b-9e36-056a1e2a37b3"
+  }
+}
