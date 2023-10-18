@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import DescribeTable from '../components/DescribeTable';
 
-const SchemaPage = () => {
+const HubspotSchemaPage = () => {
     const [describeResult, setDescribeResult] = useState(null);
     const [objName, setObjName] = useState(null);
     
@@ -21,7 +21,7 @@ const SchemaPage = () => {
     
     return (
         <>
-        <h1>Schema</h1>
+        <h1>Hubspot Schema</h1>
         <label>Describe Object</label>
         <select name="object" id="object" onChange={e => setObjName(e.target.value)}>
             <option value="">- Select Object -</option>
@@ -74,4 +74,4 @@ const STANDARD_OBJECTS = [
     }
 ];
 
-export default SchemaPage;
+export default HubspotSchemaPage;
