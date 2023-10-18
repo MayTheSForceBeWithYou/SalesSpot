@@ -67,3 +67,66 @@ const allObjectRecordsResult = async (objName, properties) => {
     } while(awaitedResponse?.paging?.next?.after);
     return results;
 };
+
+export const batchUpdateRecords = async (objName, records) => {
+    return await hubspotClient.crm.objects.batchApi.update(objName, records);
+};
+
+const batchUpdateDeals = async (records) => {
+    return await hubspotClient.crm.deals.batchApi.update(records);
+};
+
+const batchReadDeals = async (dealIds) => {
+    return await hubspotClient.crm.deals.batchApi.read(dealIds)
+};
+
+/*
+let dealsToBatchUpdate = {
+    "inputs": [
+        {
+            "id": "14942779415",
+            "properties": {
+                "intro_meeting_date__c": "10/1/2020, 3:00 PM"
+            }
+        }
+    ]
+};
+*/
+
+/*
+let dealsToBatchRead = {
+    "inputs": [{
+        "id": "14942779415"
+    }]
+};
+*/
+
+/*
+batchUpdateRecords('deals', dealsToBatchUpdate)
+.then(response => {
+    console.log(`response: ${JSON.stringify(response, null, 2)}`);
+})
+.catch(error => {
+    console.error(`error: ${JSON.stringify(error, null, 2)}`);
+});
+*/
+
+/*
+batchReadDeals(dealsToBatchRead)
+.then(response => {
+    console.log(`response: ${JSON.stringify(response, null, 2)}`);
+})
+.catch(error => {
+    console.error(`error: ${JSON.stringify(error, null, 2)}`);
+});
+*/
+
+/*
+batchUpdateDeals(dealsToBatchUpdate)
+.then(response => {
+    console.log(`response: ${JSON.stringify(response, null, 2)}`);
+})
+.catch(error => {
+    console.error(`error: ${JSON.stringify(error, null, 2)}`);
+});
+*/

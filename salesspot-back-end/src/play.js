@@ -17,15 +17,6 @@ axios.get(baseUrl, { headers })
     if (response.status === 200) {
         console.log(JSON.stringify(response.data, null, 2));
         // console.log(response.data.results.length);
-        // Extract custom fields from the response
-        const customFields = response.data.properties;
-
-        // Print custom fields
-        if(customFields) {
-            customFields.forEach((field) => {
-              console.log(`Name: ${field.name}, Type: ${field.type}`);
-            });
-        }
     } else {
       console.error(`Error: ${response.status}`);
     }
