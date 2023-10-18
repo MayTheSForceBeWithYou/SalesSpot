@@ -1,6 +1,6 @@
 import HubSpotRecords from "../components/HubSpotRecords";
 
-const ExportPage = () => {
+const HubspotExportPage = () => {
     return (
         <>
         <h1>Export</h1>
@@ -10,4 +10,4 @@ const ExportPage = () => {
     );
 };
 
-export default ExportPage;
+export default HubspotExportPage;

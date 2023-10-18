@@ -1,12 +1,13 @@
 import CsvReader from "../components/CsvReader";
 
-const ImportPage = () => {
+const SalesforceImportPage = () => {
     return (
         <>
+        <h1>Salesforce Import</h1>
         <h2>Load CSV</h2>
         <CsvReader />
         </>
     );
 };
 
-export default ImportPage;
+export default SalesforceImportPage;
